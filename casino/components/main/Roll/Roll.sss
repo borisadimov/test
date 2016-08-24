@@ -1,0 +1,157 @@
+.center
+  display: flex
+  flex-flow: column nowrap
+  align-items: center
+
+  .round
+    background: rgba(255, 255, 255, 0.1)
+    border-radius: 100%
+    position: relative
+    width: 185px
+    height: 185px
+    &:after
+      content: ''
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate3d(-50%,-50%, 0)
+      z-index: 555123
+      width: 88%
+      height: 88%
+      border-radius: 100%
+      box-shadow: 0px 0px 100px 10px rgba(98, 211, 202, 1)
+
+  .round.win
+    .planet
+      background: url("./win.png") no-repeat center center
+      background-size: contain
+
+    &:after
+      box-shadow: 0px 0px 100px 10px rgba(32, 255, 177, 1)
+
+  .round.lose
+    .planet
+      background: url("./lose.png") no-repeat center center
+      background-size: contain
+
+    &:after
+      box-shadow: 0px 0px 100px 10px rgba(225, 18, 122, 1)
+
+  .planet
+    background: url("./roll.png") no-repeat center center
+    background-size: contain
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate3d(-50%, -50%,0)
+    min-width: 165px
+    min-height: 165px
+
+  .value
+    font-size: 65px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    text-align: center
+    overflow: hidden
+    color: #fff
+
+  .roll
+    margin-top: 20px
+    color: #fff
+    font-size: 9px
+    text-transform: uppercase
+    color: rgba(255, 255, 255, 0.2)
+    text-align: center
+    position: relative
+
+    .hidden
+      visibility: hidden
+
+  .antenna
+    width: 3px
+    background: #dadbdf
+    height: 32px
+    position: absolute
+    top: -17px
+    left: -5px
+
+    transition: transform 0.2s ease
+    will-change: transform
+
+  .antenna-head
+    width: 10px
+    height: 10px
+    background: #feae82
+    border-radius: 100%
+    position: absolute
+    top: -10px
+    left: -3px
+
+  .button
+    margin-top: 6px
+    background: #fff
+    padding: 6px 34px
+    border-radius: 150px
+    text-align: center
+    cursor: pointer
+    position: relative
+    user-select: none
+
+    &:before,
+    &:after
+      content: ''
+      height: 33px
+      width: 20px
+      background: #dadcdf
+      position: absolute
+      top: 50%
+      transform: translate3d(0,-50%,0)
+      border-radius: 5px
+
+      transition: transform 0.2s ease
+      will-change: transform
+
+    &:before
+      left: -12px
+
+    &:after
+      right: -12px
+
+    &:hover .antenna
+      transform: translate3d(2px, 10%, 0)
+
+    &:hover &-inner
+      background: #d9f2f5
+
+    &:hover:after
+      transform: translate3d(-2px, -50%, 0)
+
+    &:hover:before
+      transform: translate3d(2px, -50%, 0)
+
+    &-inner
+      background: #d2e9ec
+      border-radius: 150px
+      padding: 6px 15px 4px
+      color: #375b78
+      font-size: 23px
+      min-width: 94px
+
+      transition: background 0.2s ease
+      will-change: background
+
+  .roll.lose
+    .antenna-head
+      background: #fe217c
+
+    .button-inner
+      color: #fe217c
+
+  .roll.win
+    .antenna-head
+      background: #1ce39b
+
+    .button-inner
+      color: #1ce39b

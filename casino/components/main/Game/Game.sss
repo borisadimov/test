@@ -1,0 +1,188 @@
+.game
+  background: url("./game-bg.png") no-repeat center center
+  background-size: cover
+  min-height: 297px
+  color: #61d3cb
+  z-index: 10
+  position: absolute
+  min-width: 430px
+  max-width: 430px
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  align-items: center
+
+  .win-chance,
+  .profit
+    color: #61d3cb
+
+  .groups
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    width: 100%
+    z-index: -1
+
+    .left-top,
+    .right-top,
+    .left-bottom,
+    .right-bottom
+      position: absolute
+      width: 62px
+      height: 52px
+
+    .left-top
+      background: url("./left-top.png") no-repeat center center
+      background-size: contain
+      top: 30px
+      left: 20px
+
+    .right-top
+      background: url("./right-top.png") no-repeat center center
+      background-size: contain
+      top: 30px
+      right: 20px
+
+    .left-bottom
+      background: url("./left-bottom.png") no-repeat center center
+      background-size: contain
+      bottom: 30px
+      left: 20px
+
+    .right-bottom
+      background: url("./right-bottom.png") no-repeat center center
+      background-size: contain
+      bottom: 30px
+      right: 20px
+
+  .buttons
+    display: flex
+    flex-flow: row nowrap
+    margin-top: 10px
+
+  .title
+    font-size: 11px
+    text-transform: uppercase
+
+  .centered
+    margin: 0 18px
+
+  .button
+    cursor: pointer
+    user-select: none
+    transition: background 0.1s ease, color 0.1s ease
+    will-change: background, color
+
+    &:hover
+      background: rgba(0,255,89, 0.09)
+
+    &.button-active
+      background: rgba(0,255,89, 0.29)
+      color: #fff
+
+  .input,
+  .bet
+    position: relative
+    padding: 0 10px
+    line-height: 44px
+    width: 100%
+    font-size: 15px
+    text-align: center
+    outline: none
+    background: transparent
+    border: 3px transparent solid
+    border-radius: 10px
+    color: #61d3cb
+    font-weight: bold
+
+  .input-label,
+  .bet-label
+    position: relative
+    width: 60px
+    margin: 0 20px
+
+    &:before
+      content: ''
+      width: calc(100% - 6px)
+      height: calc(50% - 3px)
+      position: absolute
+      left: 0px
+      top: 0px
+      border: 3px #1e999a solid
+      border-bottom: none
+      border-top-left-radius: 10px
+      border-top-right-radius: 10px
+
+    &:after
+      content: ''
+      width: calc(100% - 6px)
+      height: calc(50% - 3px)
+      position: absolute
+      left: 0px
+      bottom: 0px
+      border: 3px #61d3cb solid
+      border-top: none
+      border-bottom-left-radius: 10px
+      z-index: -1
+      border-bottom-right-radius: 10px
+
+  .bet-label
+    width: 90%
+    margin-top: 17px
+
+  .button,
+  .value,
+  .bet
+    position: relative
+    padding: 0 10px
+    line-height: 44px
+    font-size: 15px
+    text-align: center
+    border: 3px #1e999a solid
+    border-radius: 10px
+
+    &:after
+      content: ''
+      width: 100%
+      height: 50%
+      position: absolute
+      left: -3px
+      bottom: -3px
+      border: 3px #61d3cb solid
+      border-top: none
+      border-bottom-left-radius: 10px
+      border-bottom-right-radius: 10px
+
+  .button .colored
+    color: #1f999a
+
+  .bet
+    width: 100%
+    color: #fff
+    border: none
+
+  .value
+    color: #fff
+
+  .profit-chance,
+  .prediction
+    margin-top: 18px
+    display: flex
+    flex-flow: row nowrap
+
+  .profit-chance
+    justify-content: center
+    width: 80%
+    font-size: 11px
+    text-transform: uppercase
+
+    .profit
+      margin-right: 35px
+
+    .profit-value,
+    .win-chance-value
+      margin-left: 15px
+      color: #fff
+      font-weight: 500
+      text-transform: none

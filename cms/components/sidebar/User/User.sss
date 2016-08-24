@@ -1,0 +1,51 @@
+.user
+  border-bottom: 1px solid #CCCCCC
+  padding: 0 14px
+  font-weight: 600
+  font-size: 12px
+  color: #666666
+  letter-spacing: 0px
+  line-height: 60px
+
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  cursor: pointer
+
+  &:hover
+    .settings
+      opacity: 0.5
+
+  .profile
+    display: flex
+    align-items: center
+
+  .avatar
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.4)
+    margin-right: 9px
+    height: 32px
+    width: 32px
+    overflow: hidden
+    background: #D8D8D8
+    border: 1px solid #CCCCCC
+    border-radius: 100%
+    position: relative
+
+    .gravatar
+      width: 100%
+      height: 100%
+      background-size: contain
+      background-position: center center
+
+    &-name
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+      max-width: 150px
+
+  .settings
+    transition: opacity 0.2s ease
+    will-change: opacity
+    & svg
+      height: 16px

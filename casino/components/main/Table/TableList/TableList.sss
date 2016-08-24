@@ -1,0 +1,51 @@
+.empty
+  height: 100%
+  width: 100%
+  display: flex
+  flex-flow: column nowrap
+  align-items: center
+  margin-top: 25px
+
+.table-list
+  padding: 0 20px
+  font-size: 12px
+  margin-top: 10px
+  width: 100%
+  background: #29272d
+  border: 4px rgba(4, 4, 4, 0.07) solid
+  border-radius: 20px
+  color: #cdcdcd
+
+.table-listInner
+  height: 400px
+  overflow: hidden
+  overflow-y: scroll
+
+  -ms-overflow-style: none
+  &::-webkit-scrollbar
+    width: 0 !important
+
+.table-head
+  font-size: 11px
+  color: #1dda70
+  padding: 10px 0
+  border-bottom: 2px #1dda70 solid
+  text-transform: uppercase
+  margin-bottom: 20px
+
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  align-items: center
+  text-align: left
+
+  .table-td
+    margin: 0
+
+.table-td
+  flex: 0 0 14.2%
+  margin-bottom: 20px
+
+  &:first-child
+    color: #2ce07a
+    padding-left: 15px

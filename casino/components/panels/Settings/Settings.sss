@@ -1,0 +1,208 @@
+.Settings
+  z-index: 500
+  background: rgba(0,0,0,0.5)
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: 100%
+  min-height: 100%
+  overflow: hidden
+
+  &-inner
+    background: rgba(72,60,108,1)
+    padding: 0 35px
+
+    overflow: hidden
+    overflow-y: scroll
+    height: 100%
+    width: 50%
+
+    position: relative
+
+    display: flex
+    flex-flow: column nowrap
+
+.close-button
+  background: url('./close-button.svg') no-repeat center center
+  background-size: contain
+  height: 25px
+  width: 25px
+  cursor: pointer
+
+  position: absolute
+  right: 25px
+  top: 25px
+
+.title
+  color: #20ffae
+  text-shadow: 0px 0px 10px #20ffae
+  font-size: 32px
+  text-transform: uppercase
+  font-weight: bold
+
+  margin-top: 50px
+
+.info
+  border-left: 6px #eaeaea solid
+  padding-left: 15px
+  color: #fff
+  margin-top: 45px
+  font-size: 12px
+  line-height: 20px
+
+.visit
+  color: red
+  margin-bottom: 10px
+  font-size: 16px
+  line-height: 23px
+
+
+.profile
+  margin-top: 25px
+  display: flex
+  flex-flow: column nowrap
+  font-weight: bold
+
+.profile-item
+  margin-top: 20px
+
+.input
+  background: #362b59
+  border: none
+  text-align: left
+  border-radius: 50px
+  padding: 0 14px
+  font-size: 11px
+  font-weight: bold
+  text-transform: none
+  line-height: 33px
+  outline: none
+  margin-top: 12px !important
+  width: 100%
+  color: rgba(255,255,255,0.8)
+  &::-webkit-input-placeholder
+    text-transform: uppercase
+    color: #66539f
+  &::-moz-placeholder
+    text-transform: uppercase
+    color: #66539f
+  &:-moz-placeholder
+    text-transform: uppercase
+    color: #66539f
+  &:-ms-input-placeholder
+    text-transform: uppercase
+    color: #66539f
+
+.label
+  color: #fff
+  font-weight: normal
+  font-size: 14px
+
+.password-hint
+  font-size: 12px
+  color: red
+
+.edit
+  display: none
+
+.button
+  background: rgba(255, 255, 255, 0.07)
+  padding: 6px
+  border-radius: 150px
+  outline: none
+  text-align: center
+  cursor: pointer
+  user-select: none
+  font-weight: bold
+  border: none
+  font-size: 12px
+  text-transform: uppercase
+  color: rgba(0, 0, 0, 0.5)
+
+  align-self: flex-end
+  margin-top: 25px
+  width: 30%
+
+.button-inner
+  background: #20ffae
+  border-radius: 150px
+  padding: 9px 17px 8px
+  position: relative
+
+  &:before,
+  &:after
+    display: block
+    content: ''
+    position: absolute
+    height: 3px
+    border-radius: 5px
+    background: #fff
+    opacity: 0.3
+    top: 10%
+
+  &:before
+    left: 17%
+    width: 48%
+
+  &:after
+    right: 17%
+    width: 12%
+
+.form
+  position: relative
+
+.logout
+  cursor: pointer
+  color: #fff
+  font-size: 16px
+  font-weight: 500
+
+  flex: 1 0 auto
+  display: flex
+  justify-content: flex-end
+  flex-flow: column nowrap
+  padding: 20px 0
+
+  &-inner
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+
+  img
+    height: 20px
+    margin-right: 10px
+
+
+.save-inner
+  position: absolute
+  left: 0
+  top: 0
+
+  z-index: -1
+
+  opacity: 0
+  transition: opacity 0.2s ease
+  will-change: opacity
+
+.save-innerActive
+  opacity: 1
+  z-index: 555
+
+.save-complete
+  color: #2ce07a
+  font-weight: bold
+  text-transform: uppercase
+  font-size: 23px
+
+  flex: 1 0 auto
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  align-items: center
+
+  img
+    opacity: 0.6
+    height: 60px
+    margin-bottom: 20px

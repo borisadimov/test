@@ -1,0 +1,96 @@
+.table
+  margin: 90px 0 30px
+  position: relative
+  z-index: 2
+  background: #40394f
+  padding: 10px 46px 30px
+  border-radius: 30px
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  align-items: center
+
+  &-header
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+
+  .controls
+    display: flex
+    flex-flow: row nowrap
+    position: absolute
+    left: 5%
+    top: 25px
+
+    .left,
+    .center,
+    .right
+      height: 6px
+      width: 6px
+      border-radius: 100%
+      margin: 0 6px
+
+    .left
+      background: #52c3c3
+
+    .center
+      background: #ffb382
+
+    .right
+      background: #1dda70
+
+  .options
+    display: flex
+    flex-flow: row nowrap
+
+    .button
+      margin: 0 9px
+
+  .button
+    background: rgba(255, 255, 255, 0.04)
+    padding: 5px
+    border-radius: 150px
+    text-align: center
+    cursor: pointer
+    text-transform: uppercase
+    min-width: 90px
+    user-select: none
+
+  .button-inner
+    background: #29272d
+    border-radius: 150px
+    padding: 7px 15px 6px
+    position: relative
+    font-size: 11px
+    color: rgba(255, 255, 255, 0.5)
+    transition: background 0.1s ease
+    will-change: background
+
+    &:hover
+      background: #2a2a2b
+
+  .button-active .button-inner
+    background: #2ce07a
+    color: #fff
+
+    &:hover
+      background: #41e88a
+
+    &:before,
+    &:after
+      display: block
+      content: ''
+      position: absolute
+      height: 3px
+      border-radius: 5px
+      background: #fff
+      opacity: 0.3
+      top: 10%
+
+    &:before
+      left: 17%
+      width: 48%
+
+    &:after
+      right: 17%
+      width: 12%
